@@ -19,24 +19,23 @@ public class PrimeNum {
 		Detemine det = new Detemine();
 		
 		System.out.print("输入数字：");
-		det.dete(input.nextDouble());
+		det.dete(input.nextInt());
 		input.close();
 	}
 
 }
 class Detemine {
-	public void dete(double n){
+	public void dete(int n){
 		int i = 2;
-		n = Math.sqrt(n);
-		//System.out.println(n);
-		if (n > 2){
+		//n = (int)Math.sqrt(n);
+		//System.out.println(n+" "+i+" "+n%i);
 			for(; i < n; i++){
-				if((n % i) == 0) break;
-				System.out.println(n%i+"不是素数");
+				if((n % i) == 0) {
+					System.out.println("不是素数");
+					break;
+				}
+				else
+					System.out.println("是素数");
 			}
-			//System.out.println(n/i+"不是素数");
 		}
-		else
-			System.out.println("是素数");
 	}
-}
