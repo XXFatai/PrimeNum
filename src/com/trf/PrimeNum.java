@@ -27,12 +27,12 @@ public class PrimeNum {
 class Detemine {
 	public void dete(int n){
 		int i = 2;
-		n = (int) Math.sqrt(n);
+		int k = (int) Math.sqrt(n);
 		//System.out.println(n+" "+i+" "+n%i);
-			for(; i <= n; i++){
+			for(; i <= k; i++){
 				if((n % i) == 0) break;
 			}
-			if(i <= n)
+			if(i <= k)
 				System.out.println("不是素数");
 			else
 				System.out.println("是素数");
