@@ -15,16 +15,28 @@ public class PrimeNum {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		Detemine det = new Detemine();
 		
+		System.out.print("输入数字：");
+		det.dete(input.nextDouble());
+		input.close();
 	}
 
 }
-class Detemine{
+class Detemine {
 	public void dete(double n){
 		int i = 2;
-		
-		for (i = 2; i <= n; i++){
-			
+		n = Math.sqrt(n);
+		//System.out.println(n);
+		if (n > 2){
+			for(; i < n; i++){
+				if((n % i) == 0) break;
+				System.out.println(n%i+"不是素数");
+			}
+			//System.out.println(n/i+"不是素数");
 		}
+		else
+			System.out.println("是素数");
 	}
 }
